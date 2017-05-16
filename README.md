@@ -10,4 +10,4 @@ A clean hexo theme for bloggers.
 
 ![](http://image.bt0.com/other/hexo-m1.png)
 
-![](http://image.bt0.com/other/hexo-m2.png)
+![](http://image.bt0.com/other/hexo-m4.png)

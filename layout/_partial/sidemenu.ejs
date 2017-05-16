@@ -8,10 +8,17 @@
                 <span class="icon-bar bar2"></span>
                 <span class="icon-bar bar3"></span>
             </button>
-            <a class="navbar-brand" href="#">LOGO</a>
+            <a class="navbar-brand" href="<%- url_for() %>">
+                <% if (theme.logo_text) {%>
+                <%= theme.logo_text %>
+                <%} else if(theme.logo_image) { %>
+                <img src="/img/<%= theme.logo_image %>" class="logo-img">
+                <%} else { %>
+                你是个好人
+                <%}%>
+            </a>
         </div>
         <div class="hidden-sm hidden-xs container">
-            <a class="navbar-brand" href="#">LOGO</a>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
