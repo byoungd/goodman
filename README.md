@@ -5,7 +5,7 @@ A clean hexo theme for bloggers.
 1.clean and elegant
 2.Optimized design for reading
 
-##screen shot
+##screenshot
 ![](http://image.bt0.com/other/hexo-goodman.png)
 
 ![](http://image.bt0.com/other/hexo-m1.png)
