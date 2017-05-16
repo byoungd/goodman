@@ -1,0 +1,22 @@
+<div class="cd-timeline-block blog-post <%= post.layout %>">
+  <div class="cd-timeline-img cd-blog">
+    <img src="/img/cd-icon-blog.svg" alt="blog">
+  </div>
+
+  <div class="hover-shadow cd-timeline-content">
+    <%- partial('post/title', {class_name: 'archive-article-title'}) %>
+      <% if (post.excerpt){ %>
+      <div class="blog-post__content">
+          <%- post.excerpt %>
+          <% if (theme.excerpt_link){ %>
+        <div class="text-center">
+          <a href="<%- url_for(post.path) %>#more">
+            <button class="btn btn-success"><%= theme.excerpt_link %> <i class="ti-arrow-right"></i></button>
+          </a>
+        </div>
+      </div>
+      <% } %>
+      <% } %>
+    <span class="cd-date"><i class="ti-timer"></i> <%- partial('post/date', {class_name: 'archive-article-date', date_format: 'MMM D'}) %></span>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+# Header
+menu:
+  首页: /
+  归档: /archives
+rss: /atom.xml
+
+#logo_text: 你是个好人
+#logo_image: logo.png
+
+
+menu_icons:
+  enable: true
+  #KeyMapsToMenuItemKey: NameOfTheIcon
+  首页: home
+  home: home
+  about: user
+  categories: th
+  schedule: calendar
+  tag: tag
+  tags: tag
+  标签: tag
+  archives: archive
+  归档: archive
+  站点地图: map
+  sitemap: map
+  时间轴: timer
+
+
+slogon:
+- 当然是选择原谅她啊
+- 她真的只是去蹭空调
+
+social:
+  github: //github.com
+  facebook: //facebook.com
+  #twitter: //twitter.com
+  #pinterest: //pinterest.com
+  #linkedin:
+  instagram:
+  tumblr:
+
+
+
+excerpt_link: Read More
+
+
+thumb: true
+git_name: byoungd
+
+widgets:
+- category
+- tag
+- tagcloud
+- archive
+- recent_posts
+
+# display widgets at the bottom of index pages (pagination == 2)
+index_widgets:
+# - category
+# - tagcloud
+# - archive
+
+# widget behavior
+archive_type: 'monthly'
+show_count: false
+
+# Miscellaneous
+google_analytics:
+favicon: /favicon.png
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:
+

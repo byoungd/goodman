@@ -1,0 +1,30 @@
+@import "compass/css3";
+@import "colors";
+
+#page-nav {
+  font-size: 1.2em;
+  margin: 2em 0 2em 0;
+}
+@media (min-width: 970px) {
+  #page-nav {
+    margin: 3em 0 2em 0;
+  }
+}
+#page-nav .current {
+  background: #444;
+  @include border-radius(2px);
+  color: $fill-white;
+  padding: 0.4em 0.7em;
+  margin-right: 0.7em;
+}
+#page-nav a {
+  padding: 0.4em 0.7em;
+  margin-right: 0.7em;
+}
+#page-nav a:hover {
+  background: $bg-green-d;
+  color: #efe;
+  padding: 0.4em 0.7em;
+  margin-right: 0.7em;
+  @include border-radius(2px);
+}

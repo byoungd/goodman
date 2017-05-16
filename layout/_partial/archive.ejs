@@ -1,0 +1,82 @@
+<% if (pagination == 2){ %>
+  <% page.posts.each(function(post){ %>
+    <%- partial('article', {post: post, index: true}) %>
+  <% }) %>
+<% } else { %>
+  <% var last; %>
+  <% page.posts.each(function(post, i){ %>
+    <% var year = post.date.year(); %>
+    <% if (last != year){ %>
+      <% if (last != null){ %>
+        </div></section>
+      <% } %>
+      <% last = year; %>
+        <div class="card card-user">
+          <div class="image">
+            <img src="/img/demo.jpeg">
+          </div>
+          <div class="content">
+            <div class="author">
+              <img class="avatar border-white" src="/img/avatar.jpg" alt="<%= config.author %>">
+              <h4 class="title"><%= config.author %><br>
+                <% if (theme.git_name) {%>
+                <a href="//github.com/<%= theme.git_name %>"><small>@<%= theme.git_name %></small></a>
+              <%}%>
+              </h4>
+            </div>
+
+              <% if (theme.slogon){ %>
+              <div class="description text-center">
+                  <% for (var i in theme.slogon) { %>
+                <p>
+                    <%= theme.slogon[i] %><br/>
+                </p>
+              <% }%>
+              </div>
+              <% }%>
+
+          </div>
+          <hr>
+              <div class="text-center">
+                <div class="row">
+                  <div class="col-md-4">
+                    <h5><%= site.posts.length %><br><small>Blogs</small></h5>
+                  </div>
+                  <div class="col-md-4">
+                    <h5><%= site.pages.length %><br><small>Pages</small></h5>
+                  </div>
+                  <div class="col-md-4">
+                    <h5><%= site.categories.length %><br><small>Categories</small></h5>
+                  </div>
+
+                </div>
+              </div>
+        </div>
+        <div class="archive-year-wrap">
+          <a class="btn btn-success" href="<%- url_for(config.archive_dir + '/' + year) %>"><i class="ti-time"></i> <%= year %></a>
+        </div>
+        <div class="archives">
+       <section id="cd-timeline" class="cd-container">
+        <% } %>
+
+         <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+
+        <% }) %>
+          <% if (page.posts.length){ %>
+            </div>
+          </section>
+          <% } %>
+        <% } %>
+
+
+<% if (page.total > 1){ %>
+
+
+  <nav id="page-nav" class="text-center">
+
+    <%- paginator({
+      prev_text: '<i class="ti-arrow-left"></i>',
+      next_text: '<i class="ti-arrow-right"></i>'
+    }) %>
+  </nav>
+<% } %>

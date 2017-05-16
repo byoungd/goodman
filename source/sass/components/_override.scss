@@ -1,0 +1,57 @@
+@import "colors";
+
+@media (min-width: 1200px){
+  .container {
+  width: 970px;
+}}
+h1 {
+  font-size: 2.4em;
+}
+a {
+  background-color: transparent;
+  color: $link;
+}
+
+.bg-white {
+  background: $bg-white;
+}
+.sidebar .nav p, .off-canvas-sidebar .nav p {
+  text-transform: none;
+}
+.navbar-default {
+  background-color: $bg-white;
+  border-bottom: 1px solid #DDDDDD;
+}
+.sidebar .nav li.active > a:before, .off-canvas-sidebar .nav li.active > a:before{
+  border-right: 17px solid #bbbbbb;
+}
+.sidebar .nav li.active > a:after, .off-canvas-sidebar .nav li.active > a:after{
+  border-right: 17px solid #ffffff;
+}
+.blog-panel {
+  width: 100%;
+  background-color: #fafafa;
+  float: none;
+}
+.dropdown-menu {
+  background: #fff;
+}
+.sidebar .logo i,.sidebar-wrapper .logo i {
+  color: $danger-color;
+}
+.sidebar .logo .simple-text, .sidebar[data-background-color="white"] .logo .simple-text, .off-canvas-sidebar .logo .simple-text, .off-canvas-sidebar[data-background-color="white"] .logo .simple-text {
+  font-family: "SF Pro SC", "SF Pro Text", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.sidebar .nav, .off-canvas-sidebar .nav {
+  margin: 20px 0;
+}
+.sidebar .nav li:not(.active) > a, .sidebar[data-background-color="white"] .nav li:not(.active) > a, .off-canvas-sidebar .nav li:not(.active) > a, .off-canvas-sidebar[data-background-color="white"] .nav li:not(.active) > a {
+  color: #333;
+}
+@media (max-width: 991px) {
+  .sidebar .nav i, .off-canvas-sidebar .nav i {
+    margin-left: 12px;
+  }
+
+}

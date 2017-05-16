@@ -1,0 +1,80 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="blog-post">
+    <%- partial('post/gallery') %>
+    <% if (post.link || post.title){ %>
+
+                <%- partial('post/title', {class_name: ''}) %>
+
+
+        <span  class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" style="" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget">
+            <div class="blog-post__metadata">
+               <img src="/img/avatar.jpg" class="blog-post__metadata__author-img">
+             <div>
+                 <% if (post.author) {%>
+                 <%= post.author %>
+                 <%} else {%>
+                 <%= config.author %>
+                 <% }%>
+              <div class="blog-post__metadata__post-info">
+                   <div class="blog-post__metadata__read-time">
+                         <%- partial('post/date', {class_name: 'article-date', date_format: null}) %> |
+                   </div>
+                    <div class="blog-post__metadata__topics">
+                         <%- partial('post/category') %>
+                    </div>
+              </div>
+            </div>
+        </div>
+        </span>
+        <div class="blog-post__resource">
+        <% if (theme.thumb) {%>
+               <% if (post.thumb) {%>
+                <%- partial('post/thumb') %>
+                    <%} else {%>
+                    <a href="<%- url_for(post.path) %>" target="_blank">
+                        <div class="blog-post__image-container" style="background-image: url(/img/demo.jpeg)">
+                            <div class="blog-post__image-overlay">
+                            </div>
+                        </div>
+                    </a>
+
+                    <%}%>
+            <%}%>
+        </div>
+        <% } %>
+
+        <% if (post.excerpt && index){ %>
+        <div class="blog-post__content">
+            <%- post.excerpt %>
+                <% if (theme.excerpt_link){ %>
+                <div class="text-center">
+                    <a href="<%- url_for(post.path) %>#more">
+                        <button class="btn btn-success"><%= theme.excerpt_link %> <i class="ti-arrow-right"></i></button>
+                    </a>
+                </div>
+        </div>
+        <% } %>
+        <% } else { %>
+            <div class="blog-post__content">
+                <%- post.content %>
+            </div>
+        <% } %>
+
+
+    <% if (!index){ %>
+    <%- partial('post/nav') %>
+    <% } %>
+
+</article>
+
+
+<% if (!index && post.comments && config.disqus_shortname){ %>
+<section class="article-footer">
+    <%- partial('post/tag') %>
+</section>
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+<% } %>

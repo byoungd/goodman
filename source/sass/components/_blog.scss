@@ -1,0 +1,120 @@
+@import "compass/css3";
+@import "colors";
+.blog-post+.blog-post {
+  margin-top: 85px;
+}
+.blog-post .large-title {
+  font-weight: 600;
+  line-height: 1.1;
+  font-size: 2.4em;
+  :hover {
+    color: $success-states-color;
+  }
+}
+.blog-post__metadata__post-info {
+  @include display-flex;
+  @include flex-wrap(wrap);
+  margin: 0 -7px;
+}
+.blog-post__metadata {
+  @include display-flex;
+  margin-bottom: 20px;
+  @include align-items(center);
+}
+.blog-post__metadata__author-img {
+  width: 45px;
+  height: 45px;
+  @include border-radius(50%);
+  @include flex(0 0 auto);
+  margin-right: 10px;
+}
+.blog-post__metadata__read-time {
+  padding: 0 7px;
+  color: $time;
+}
+.blog-post__metadata__topics {
+  @include display-flex;
+  @include flex-wrap(wrap);
+  margin: 0 -5px;
+  padding: 0 7px;
+  a {
+    color: $fill-green;
+  }
+}
+.blog-post__metadata__topic {
+  padding: 0 5px;
+}
+.blog-post__resource {
+  position: relative;
+}
+.blog-post__image-container {
+  min-height: 225px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 -8px 36px -8px;
+  @include border-radius(6px);
+  @include box-shadow(0 36px 48px 0 rgba(0,0,0,.2));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.blog-post__image-overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  @include border-radius(6px);
+  background-color: $bg-green-d;
+  transition: opacity .3s ease;
+}
+.blog-post__image-overlay::after {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-size: 33px 28px;
+}
+.blog-post__content {
+  margin: 30px 0 10px;
+  font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 18px;
+  line-height: 36px;
+  color: $posttext;
+}
+.blog-post__content p {
+  font-size: 18px;
+  color: $posttext-detail;
+  line-height: 36px;
+}
+.blog-post__content p a {
+  color: $link-hover;
+  margin: 0 0 10px;
+}
+.blog-post__content h3 {
+  margin: 40px 0 30px;
+  font-family: "SF Pro SC","SF Pro Text","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;;
+  font-size: 24px;
+  color: $fill-black;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+@media (min-width: 992px) {
+  .blog-pagination {
+    margin-bottom: 0;
+  }
+}
+.blog-pagination {
+  margin: 40px 0;
+  text-align: center;
+  @include display-flex;
+  @include justify-content(space-between);
+}
+.blog-pagination__btn--next .blog-pagination__btn-label, .blog-pagination__btn--prev .blog-pagination__btn-label {
+  @include flex(1);
+}

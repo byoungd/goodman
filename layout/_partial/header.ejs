@@ -1,0 +1,51 @@
+<div class="sidebar" data-background-color="white" data-active-color="danger">
+  <div class="sidebar-wrapper">
+    <div class="logo">
+      <a href="<%- url_for() %>" class="simple-text">
+          <% if (theme.logo_text) {%>
+          <%= theme.logo_text %>
+          <%} else if(theme.logo_image) { %>
+          <img src="/img/<%= theme.logo_image %>" class="logo-img">
+          <%} else { %>
+          <i class="ti-heart-broken"></i> 你是个好人
+          <%}%>
+      </a>
+    </div>
+    <ul class="nav">
+        <% for (var i in theme.menu){ %>
+      <li>
+        <a href="<%- url_for(theme.menu[i]) %>">
+            <% if (theme.menu_icons.enable) { %>
+          <i class="ti-<%= theme.menu_icons[i] %>"></i> <p><%= i %></p>
+            <% } %>
+
+        </a>
+      </li>
+        <% } %>
+
+
+        <% if (theme.rss){ %>
+      <a id="nav-rss-link" class="nav-icon" href="<%- theme.rss %>" title="<%= __('rss_feed') %>"></a>
+        <% } %>
+    </ul>
+      <% if (theme.slogon){ %>
+          <div class="slogon text-center">
+          <% for (var i in theme.slogon) { %>
+          <p>
+           <%= theme.slogon[i] %><br/>
+          </p>
+          <% }%>
+          </div>
+      <% }%>
+
+      <% if (theme.social){ %>
+
+    <div class="social">
+        <% for (var i in theme.social) { %>
+          <a class="btn" href="<%= theme.social[i] %>" target="_blank"><i class="ti-<%= i %>"></i> <%= i %></a>
+        <% }%>
+    </div>
+
+      <% }%>
+  </div>
+</div>

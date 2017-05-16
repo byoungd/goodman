@@ -1,0 +1,34 @@
+<%- partial('_partial/head') %>
+
+
+<body>
+
+  <div class="wrapper">
+
+
+      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+
+
+    <div class="main-panel">
+        <%- partial('_partial/sidemenu', null, {cache: !config.relative_link}) %>
+      <div class="content bg-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <div class="post-area">
+                    <%- body %>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+        <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    </div>
+
+  </div>
+
+</body>
+<%- partial('_partial/after-footer') %>
+</html>
