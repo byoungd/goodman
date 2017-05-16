@@ -1,12 +1,13 @@
 # Goodman
-A clean hexo theme for bloggers.
+A clean hexo theme.
 
-###feature
+### feature
 
 1.clean and elegant
+
 2.Optimized design for reading
 
-###screenshot
+### screenshot
 
 ![](http://image.bt0.com/other/hexo-goodman.png)
 
