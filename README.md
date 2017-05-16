@@ -3,7 +3,7 @@ A clean hexo theme.
 
 ## demo site
 
-![http://hexo.wb.cm/index.html]
+[http://hexo.wb.cm/index.html]
 
 ### feature
 
