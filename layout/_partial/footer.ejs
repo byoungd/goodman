@@ -1,17 +1,26 @@
 <footer class="footer">
     <div class="container-fluid">
-        <nav class="pull-left">
-            <ul>
-                <li>
-                   <a href="http://hexo.io/" target="_blank">Powered by Hexo</a>
-                </li>
-                <li>
-                    &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
-                </li>
-            </ul>
+        <nav class="pull-left friendlinks">
+<ul>
+    <% for (var i in theme.friendlinks ){ %>
+    <li>
+        <a href="<%= theme.friendlinks[i] %>"><%= i %></a>
+    </li>
+    <% } %>
+
+</ul>
+
         </nav>
         <div class="copyright pull-right">
-            Made with <i class="ti-heart heart"></i> by <a href="/">GoodMan</a>
+
+
+                    <a href="http://hexo.io/" target="_blank">Powered by Hexo</a>
+
+
+                    &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %>
+
+
+
         </div>
     </div>
 </footer>

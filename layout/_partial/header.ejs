@@ -42,8 +42,10 @@
 
     <div class="social">
         <% for (var i in theme.social) { %>
-          <a class="btn" href="<%= theme.social[i] %>" target="_blank"><i class="ti-<%= i %>"></i> <%= i %></a>
-        <% }%>
+
+          <a class="btn btn-<%= theme.btn_sidebar %>" href="<%= theme.social[i] %>" target="_blank"><i class="ti-<%= i %>"></i> <%= i %></a>
+
+        <%}%>
     </div>
 
       <% }%>

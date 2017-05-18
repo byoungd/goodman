@@ -1,15 +1,23 @@
 # Goodman
-A clean hexo theme.
 
-## demo site
+A clean and elegant hexo theme.
 
-[http://hexo.wb.cm/index.html]
+## Demo site
 
-### feature
+http://hexo.wb.cm/
 
-1.clean and elegant
+## update
 
-2.Optimized design for reading
+- Add rect button option
+- Add friendlinks in footer area
+- change sidebar button to rect style
+- change nav button color from black to green
+
+### Features
+
+- Elegant
+- Design for reading
+- Advanced code highlight (using prismjs)
 
 ### screenshot
 

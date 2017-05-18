@@ -48,7 +48,7 @@
                 <% if (theme.excerpt_link){ %>
                 <div class="text-center">
                     <a href="<%- url_for(post.path) %>#more">
-                        <button class="btn btn-success"><%= theme.excerpt_link %> <i class="ti-arrow-right"></i></button>
+                        <button class="btn btn-success btn-<%= theme.btn_readmore %>"><%= theme.excerpt_link %> <i class="ti-arrow-right"></i></button>
                     </a>
                 </div>
         </div>

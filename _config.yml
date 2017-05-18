@@ -25,6 +25,10 @@ menu_icons:
   sitemap: map
   时间轴: timer
 
+#Options:default is round and rect is making button rect
+btn_sidebar: rect
+btn_readmore:
+btn_nav:
 
 slogon:
 - 当然是选择原谅她啊
@@ -39,7 +43,10 @@ social:
   instagram:
   tumblr:
 
-
+#Format: name: url
+friendlinks:
+  goodman: https://github.com/byoungd/goodman
+  github: https://github.com/
 
 excerpt_link: Read More
 

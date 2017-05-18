@@ -3,7 +3,7 @@
     <div>
   <% if (post.prev){ %>
 
-      <a class="btn btn-default blog-pagination__btn blog-pagination__btn--prev" href="<%- url_for(post.prev.path) %>">
+      <a class="btn btn-success btn-<%= theme.btn_nav %> blog-pagination__btn blog-pagination__btn--prev" href="<%- url_for(post.prev.path) %>">
           <i class="ti-arrow-left"></i>
           <% if (post.prev.title){ %>
           <span class="blog-pagination__btn-label"><%= post.prev.title %></span>
@@ -16,7 +16,7 @@
     </div>
       <% if (post.next){ %>
     <div>
-      <a class="btn btn-default blog-pagination__btn blog-pagination__btn--next" rel="next" href="<%- url_for(post.next.path) %>">
+      <a class="btn btn-success btn-<%= theme.btn_nav %> blog-pagination__btn blog-pagination__btn--next" rel="next" href="<%- url_for(post.next.path) %>">
           <span class="blog-pagination__btn-label"><%= post.next.title %></span>
           <i class="ti-arrow-right"></i>
       </a>

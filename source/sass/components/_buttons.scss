@@ -1,3 +1,4 @@
+@import "compass/css3";
 .btn,
 .navbar .navbar-nav > li > a.btn{
     border-radius: $border-radius-btn-base;
@@ -111,4 +112,7 @@
     top: 50%;
     margin-top: -1px;
     right: 8px;
+}
+.btn-rect {
+    @include border-radius(0);
 }
