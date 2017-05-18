@@ -21,7 +21,8 @@ http://hexo.wb.cm/
 
 ### screenshot
 
-![](http://image.bt0.com/other/hexo-goodman.png)
+
+![](http://image.bt0.com/other/goodman1.1.png)
 
 ![](http://image.bt0.com/other/hexo-m1.png)
 
