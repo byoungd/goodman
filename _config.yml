@@ -1,13 +1,14 @@
-# Header
+# sidebar菜单
 menu:
   首页: /
   归档: /archives
 rss: /atom.xml
 
+#删除下方的注释符号即可选择使用文字或图片
 #logo_text: 你是个好人
 #logo_image: logo.png
 
-
+#菜单图标选项
 menu_icons:
   enable: true
   #KeyMapsToMenuItemKey: NameOfTheIcon
@@ -30,10 +31,12 @@ btn_sidebar: rect
 btn_readmore:
 btn_nav:
 
+#sidebar的文字信息
 slogon:
 - 当然是选择原谅她啊
 - 她真的只是去蹭空调
 
+#name: url
 social:
   github: //github.com
   facebook: //facebook.com
@@ -50,16 +53,12 @@ friendlinks:
 
 excerpt_link: Read More
 
-
+#文章缩略图选项，开启后如果没有在front-matter设置则使用默认demo图片
 thumb: true
+
+#archives页面的github用户名
 git_name: byoungd
 
-widgets:
-- category
-- tag
-- tagcloud
-- archive
-- recent_posts
 
 # display widgets at the bottom of index pages (pagination == 2)
 index_widgets:

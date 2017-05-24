@@ -7,7 +7,7 @@ A clean and elegant hexo theme.
 http://hexo.wb.cm/
 
 ## update
-
+- Add license
 - Add rect button option
 - Add friendlinks in footer area
 - change sidebar button to rect style
@@ -27,3 +27,7 @@ http://hexo.wb.cm/
 ![](http://image.bt0.com/other/hexo-m1.png)
 
 ![](http://image.bt0.com/other/hexo-m4.png)
+
+### License
+
+MIT

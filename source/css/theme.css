@@ -495,6 +495,12 @@ hr {
   width: 100%;
   margin: 0 0 0.6em 0;
 }
+.sidebar .slogon .btn-rect, .sidebar .social .btn-rect,
+.off-canvas-sidebar .slogon .btn-rect,
+.off-canvas-sidebar .social .btn-rect {
+  width: 76%;
+  margin-left: 12%;
+}
 .sidebar .social a,
 .off-canvas-sidebar .social a {
   text-transform: capitalize;
@@ -4152,7 +4158,7 @@ a {
 }
 
 .sidebar .nav, .off-canvas-sidebar .nav {
-  margin: 20px 0;
+  margin: 16px 24px;
 }
 
 .sidebar .nav li:not(.active) > a, .sidebar[data-background-color="white"] .nav li:not(.active) > a, .off-canvas-sidebar .nav li:not(.active) > a, .off-canvas-sidebar[data-background-color="white"] .nav li:not(.active) > a {
